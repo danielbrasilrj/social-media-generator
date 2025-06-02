@@ -1,0 +1,7 @@
+### Create a Playlist
+POST http://localhost:8080/api/image/generate
+Content-Type: application/json
+
+{
+  "prompt": "A cat sitting on a beach during sunset"
+}

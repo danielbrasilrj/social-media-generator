@@ -9,24 +9,27 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
 repositories {
 	mavenCentral()
+	maven {
+		url 'https://repo.spring.io/snapshot'
+	}
 }
 
 ext {
-	set('springAiVersion', "1.0.0-M7")
+	set('springAiVersion', "1.0.0-SNAPSHOT")
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
 	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
 }
 
 dependencyManagement {
